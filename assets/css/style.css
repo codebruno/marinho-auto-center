@@ -11,12 +11,35 @@
 /* Variáveis CSS */
 :root {
     --primary-color: #007bff; /* Azul padrão do Bootstrap */
-    --secondary-color: #6c757d; /* Cinza */
+    --secondary-color: #242424; /* Cinza */
     --background-color: #282c34; /* Fundo escuro */
     --text-color: #ffffff; /* Texto branco */
     --soft-red-color: #ff3737; /* Vermelho suave */
     --whatsapp-green: #25d366; /* Verde do WhatsApp */
     --whatsapp-hover: #1ebc5b; /* Hover do botão WhatsApp */
+
+    /* Cores para a seção Hero */
+    --hero-title-color: var(--soft-red-color);
+    --hero-subtitle-color: var(--text-color);
+    
+    /* Cores para os Botões */
+    --button-bg-color: var(--whatsapp-green);
+    --button-hover-color: var(--whatsapp-hover);
+    
+    /* Cores para a Seção Sobre */
+    --about-title-color: var(--text-color);
+    --about-text-color: var(--text-color);
+    
+    /* Cores para a Seção de Serviços */
+    --service-title-color: var(--text-color);
+    --service-text-color: var(--text-color);
+    --service-card-bg-color: var(--background-color);
+    --service-icon-color: var(--soft-red-color);
+    
+    /* Cores para o Acordeão */
+    --accordion-bg-color: var(--secondary-color);
+    --accordion-text-color: var(--text-color);
+    --accordion-body-bg-color: rgba(0, 0, 0, 0.6);
 }
 
 /* Configuração Global */
@@ -54,7 +77,7 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5); /* Fundo escuro com transparência */
-    backdrop-filter: blur(5 px); /* Desfoque leve */
+    backdrop-filter: blur(5px); /* Desfoque leve */
     z-index: -1;
 }
 
@@ -72,33 +95,26 @@ body {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    color: var(--hero-title-color);
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Legibilidade sobre a imagem */
     letter-spacing: 1px;
-}
-
-.hero-title  span{
-    color: var(--soft-red-color);
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
     margin-bottom: 2rem;
+    color: var(--hero-subtitle-color);
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Legibilidade sobre a imagem */
     letter-spacing: 1px;
     font-weight: 800;
 }
 
-.hero-subtitle span{
-    color: var(--soft-red-color);
-}
-
-
 /* Botão WhatsApp */
 .btn-primary {
-    background-color: var(--whatsapp-green);
+    background-color: var(--button-bg-color);
     border: none;
     padding: 0.7rem 2rem;
-    min-width:  250px;
+    min-width: 250px;
     font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 0.8px;
@@ -111,7 +127,7 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: var(--whatsapp-hover);
+    background-color: var(--button-hover-color);
 }
 
 .bi-whatsapp  {
@@ -128,7 +144,7 @@ body {
 /* Cards de Serviços */
 .service-card {
     transition: transform 0.3s ease;
-    background-color: var(--background-color);
+    background-color: var(--service-card-bg-color);
     border-radius: 8px;
     padding: 1.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -144,13 +160,13 @@ body {
 
 /* Ícones */
 .service-card i {
-    color: var(--soft-red-color);
+    color: var(--service-icon-color);
     font-size: 1.5rem;
 }
 
 /* Título dos Cards */
 .service-card h3 {
-    color: var(--text-color);
+    color: var(--service-title-color);
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
@@ -159,6 +175,7 @@ body {
 .service-card p {
     flex-grow: 1;
     margin-bottom: 1rem;
+    color: var(--service-text-color);
     font-size: 0.8rem;
     letter-spacing: 0.8px;
 }
@@ -176,10 +193,8 @@ body {
         display: flex;
         justify-content: center;
     }
-    
 }
 
-/* Seção Sobre */
 /* Estilo para a seção Sobre */
 .about-section {
     background: url('../banner/banner-2.svg') no-repeat center center;
@@ -194,10 +209,98 @@ body {
     padding: 2rem; /* Espaçamento interno */
     border-radius: 8px; /* Bordas arredondadas */
     backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
-    color: var(--text-color); /* Cor do texto */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra leve para destaque */
+    color: var(--about-text-color); /* Cor do texto */
 }
-
-.about-description p{
+.about-title{
+    font-weight: bold;
     letter-spacing: 0.8px;
 }
+
+.about-description{
+    letter-spacing: 0.8px;
+}
+
+/* Estilos para a seção de serviços */
+.services-section {
+    padding: 4rem 0;
+    background-color: var(--background-color); /* Fundo escuro */
+    color: var(--text-color); /* Texto branco */
+}
+
+.services-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--text-color); /* Texto branco */
+    text-align: center;
+    letter-spacing: 0.8px;
+}
+
+.services-description {
+    margin-bottom: 2rem;
+    color: var(--text-color); /* Texto branco */
+    letter-spacing: 0.8px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.service-item {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.service-item img {
+    width: 100%;
+    height: auto; /* Manter proporção das imagens */
+    max-width: 300px; /* Limitar a largura máxima */
+}
+
+.service-item h3{
+    margin-top: 10px;
+    font-size: 1.4rem;
+}
+
+.service-item p{
+   letter-spacing: 0.8px;
+   color: #969696;
+   font-size: 0.8rem;
+}
+
+/* Botão do Acordeão (tanto colapsado quanto expandido) */
+.accordion-button {
+    background-color: var(--secondary-color); /* Mantém o fundo cinza */
+    color: var(--text-color); /* Texto branco */
+    border: none; /* Remove a borda */
+    transition: none; /* Remove as transições do Bootstrap */
+    box-shadow: none; /* Remove o box-shadow padrão */
+    letter-spacing: 0.8px;
+}
+
+/* Impede a mudança de cor quando o acordeão está expandido */
+.accordion-button:not(.collapsed) {
+    background-color: var(--secondary-color); /* Mesma cor ao expandir */
+    color: var(--text-color); /* Mesma cor de texto */
+    box-shadow: none; /* Remove a sombra ao expandir */
+}
+
+/* Estilo para o corpo do acordeão */
+.accordion-body {
+    background-color: #1b1b1b; /* Fundo escuro do conteúdo */
+    color: rgb(192, 192, 192); /* Texto branco */
+    letter-spacing: 0.8px;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+/* Remove o foco visual ao clicar no botão */
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+/* Remove o indicador de colapso (ícone de seta) que o Bootstrap adiciona */
+.accordion-button::after {
+    display: none;
+}
+
+
+ 
