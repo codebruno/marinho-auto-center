@@ -309,13 +309,11 @@ body {
 }
 
 /* Seção de Horários */
-
-
+/* Seção de Horários */
 .horarios-section {
     padding: 4rem 0;
-    background-color: var(--background-color); /* Fundo escuro */
-    color: var(--text-color); /* Texto branco */
-    background-color: var(--secondary-color); /* Mesma cor ao expandir */
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 /* Container do Mapa */
@@ -324,10 +322,10 @@ body {
     height: 350px;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilo para o título da seção */
+/* Estilo do título */
 .horarios-content .section-title {
     font-size: 2rem;
     color: var(--text-color);
@@ -335,7 +333,31 @@ body {
     margin-bottom: 1rem;
 }
 
-/* Estilo da lista de horários */
+//* Seção de Horários */
+.horarios-section {
+    padding: 4rem 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Container do Mapa */
+.map-container {
+    width: 100%;
+    height: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo do título */
+.horarios-content .section-title {
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Lista de Horários */
 .horarios-list {
     list-style: none;
     font-size: 1.1rem;
@@ -344,11 +366,89 @@ body {
 
 .horarios-list li {
     margin-bottom: 0.5rem;
-    letter-spacing: 0.8px;
 }
 
 .horarios-list li strong {
-    color: var(--soft-red-color); /* Destaque nos dias da semana */
+    color: var(--soft-red-color);
 }
 
- 
+/* Título das Redes Sociais */
+.social-title {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* Redes Sociais */
+.social-icons {
+    margin-top: 1rem;
+}
+
+/* Ícones de Redes Sociais com cores padrão */
+.social-icon {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    font-size: 1rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.social-icon.facebook {
+    background-color: #1877f2; /* Cor padrão do Facebook */
+}
+
+.social-icon.instagram {
+    background-color: #e1306c; /* Cor padrão do Instagram */
+}
+
+/* Efeito hover para ícones */
+.social-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Ícones do Bootstrap */
+.social-icon i {
+    font-size: 1.5rem;
+}
+
+
+/* Footer */
+.site-footer {
+    background-color: var(--footer-background-color);
+    padding: 2rem 0;
+    color: var(--footer-text-color);
+    font-size: 1rem;
+    border-top: 3px solid var(--soft-red-color); /* Linha superior para destaque */
+}
+
+/* Estilo do texto */
+.site-footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Link para o criador */
+.site-footer a {
+    color: var(--highlight-color); /* Cor destacada para o link do criador */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+    color: var(--hover-color); /* Cor ao passar o mouse sobre o link */
+}
+
+/* Alinhamento do texto */
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
