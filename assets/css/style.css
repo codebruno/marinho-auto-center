@@ -308,5 +308,47 @@ body {
     display: none;
 }
 
+/* Seção de Horários */
+
+
+.horarios-section {
+    padding: 4rem 0;
+    background-color: var(--background-color); /* Fundo escuro */
+    color: var(--text-color); /* Texto branco */
+    background-color: var(--secondary-color); /* Mesma cor ao expandir */
+}
+
+/* Container do Mapa */
+.map-container {
+    width: 100%;
+    height: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+/* Estilo para o título da seção */
+.horarios-content .section-title {
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Estilo da lista de horários */
+.horarios-list {
+    list-style: none;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.horarios-list li {
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.8px;
+}
+
+.horarios-list li strong {
+    color: var(--soft-red-color); /* Destaque nos dias da semana */
+}
 
  
