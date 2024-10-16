@@ -92,16 +92,22 @@ body {
 
 /* Título e Subtítulo */
 .hero-title {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 3rem;
+    font-weight: bold;
     margin-bottom: 1rem;
-    color: var(--hero-title-color);
+    color: var(--about-title-color);
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Legibilidade sobre a imagem */
     letter-spacing: 1px;
 }
 
+.hero-title span{
+    color: var(--hero-title-color);
+    font-weight: bold;
+    font-size: 3rem;
+}
+
 .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
     color: var(--hero-subtitle-color);
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Legibilidade sobre a imagem */
